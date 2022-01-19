@@ -47,12 +47,12 @@
       </div>
 
       <div class="navbar-menu navbar-end">
-          <a class="navbar-item" href="/products/new"> New Product </a>
+          <a class="navbar-item" href="/superheros/new"> New Superhero </a>
       </div>
     </nav>
     <section class="hero is-medium has-background-light">
       <div class="hero-body">
-        <h1 class="title">Product Show Page</h1>
+        <h1 class="title">Superhero Show Page</h1>
       </div>
     </section>
 
@@ -60,20 +60,20 @@
       <article class="media">
         <figure class="media-left">
           <p class="image is-328x328">
-            <img src="<%= product.image %>" alt="product img" />
+            <img src="<%= superhero.image %>" alt="product img" />
           </p>
         </figure>
         <div class="media-content">
           <div class="content">
-            <h3>name: <%= product.name %></h3>
-            <small>price: $<%= product.price %></small>
+            <h3>name: <%= superhero.name %></h3>
+            <small>power: $<%= superhero.power %></small>
             <div class="field mt-5 is-grouped">
               <div class="control">
-                <a class="button is-info" href="/products/<%= product.id %>/edit">Edit Product
+                <a class="button is-info" href="/products/<%= product.id %>/edit">Edit Superhero
                 </a>
               </div>
               <p class="control">
-                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                <form action="/superheros/<%= superhero.id %>?_method=DELETE" method="POST">
                     <input class="button is-danger" type="submit" value="Delete Product"/>                    
                 </form>
               </p>

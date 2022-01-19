@@ -30,7 +30,7 @@
         aria-label="main navigation"
         >
             <div class="navbar-brand">
-                <a class="navbar-item" href="/products"> All Products </a>
+                <a class="navbar-item" href="/superheros"> All Superheros </a>
 
                 <a
                     role="button"
@@ -45,37 +45,37 @@
                 </a>
             </div>
                 <div class="navbar-menu navbar-end">
-                    <a class="navbar-item" href="/products/new"> New Product </a>
+                    <a class="navbar-item" href="/superheros/new"> New Superhero </a>
                 </div>
             </nav>
         </nav>
 
         <section class="hero is-medium has-background-light">
             <div class="hero-body">
-                <p class="title">All Products</p>
+                <p class="title">All Superheros</p>
             </div>
         </section>
 
         <main class="container is-max-widescreen">
             <div class="columns is-multiline p-5">
-                <% for(let idx = 0; idx < products.length; idx++){ %> 
-                    <% const product = products[idx] %>
+                <% for(let i = 0; i < superheros.length; i++){ %> 
+                    <% const superhero = superheros[i] %>
 
             <div class="column is-one-third">
                 <article class="card">
                     <section class="card-image">
                         <figure class="image is-3by3">
-                            <img src="<%= product.image %>" alt="Placeholder image" />
+                            <img src="<%= superhero.image %>" alt="Placeholder image" />
                         </figure>
             </div>
             </section>
                             <div class="card-content">
                                 <div class="content">
                                     <h3>
-                                    <a href="/products/<%= product.id %>"><%= product.name %> </a>
+                                    <a href="/superhero/<%= superhero.id %>"><%= superhero.name %> </a>
                                     </h3>
 
-                                    <p>$<%= product.price %></p>
+                                    <p>$<%= superhero.power %></p>
                                 </div>
                             </div>
                         </article>

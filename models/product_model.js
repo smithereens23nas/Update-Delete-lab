@@ -122,21 +122,21 @@ class Product {
 // at the bottom 
 module.exports = new Collection(Product, [
     {
-        name: "Internet Friends",
-        price: 29,
+        name: "Wolverine",
+        power: "metal claws",
         image:
-            "https://cdn.shopify.com/s/files/1/1297/1509/products/hero1_6de889fb-b540-49e4-b733-3af0baaa7f63_x1440.jpg?v=1571274629",
+            "https://wallpapercave.com/wp/wp5520660.jpg",
     },
     {
-        name: "Angry Pants",
-        price: 35,
+        name: "Superman",
+        power: "laser beam",
         image:
-            "https://cdn.shopify.com/s/files/1/1297/1509/products/HERO_c5b0ec76-ad06-4cc7-a165-6129e11a8ff6_x1440.jpg?v=1571274622",
+            "https://wallpapercave.com/dwp2x/wp6386977.jpg",
     },
     {
-        name: "Dead Cool",
-        price: 50,
+        name: "Spider-Man",
+        power: "Web Slinging and spidey senses",
         image:
-            "https://cdn.shopify.com/s/files/1/1297/1509/products/hero1_40030160-f468-4d50-8f30-c8b9733ce84e_x1440.jpg?v=1575020412",
+            "https://wallpapercave.com/wp/wp5431513.jpg",
     }
 ]);

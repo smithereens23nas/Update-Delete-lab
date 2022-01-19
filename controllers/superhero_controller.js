@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const superheros = require('../models/product_model.js')
+const superheros = require('../models/product_model')
 
 router.get('/', (req, res) => {
     
@@ -80,11 +80,11 @@ router.delete('/:superheroId', (req, res) => {
 })
 
 router.get('/:superheroId/edit', (req, res) => {
-    products.findById(req.params.superheroId, (error, updatedProduct) => {
+    products.findById(req.params.superheroId, (error, updateSuperhero) => {
         if(error) console.log(error);
 
-        console.log(updatedProduct);
-        res.render('edit.ejs', { product: updatedProduct})
+        console.log(updateSuperhero);
+        res.render('edit.ejs', { superhero: updateSuperhero})
     })
 })
 
@@ -92,10 +92,10 @@ router.put('/:superheroId', (req, res) => {
     console.log(`The request is ${req}`)
     // console.log(`The request's body is ${req.body}`)
 
-    products.findByIdAndUpdate(req.params.superheroId, req.body,(error, updatedProduct) => {
+    products.findByIdAndUpdate(req.params.superheroId, req.body,(error, updateSuperhero) => {
         if (error) return console.log(error);
 
-        console.log(updatedProduct);
+        console.log(updateSuperhero);
 
         return res.redirect(`/superheros`);
     });
